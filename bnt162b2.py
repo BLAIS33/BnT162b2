@@ -11,7 +11,7 @@ def mmap_io(filename):
         with mmap.mmap(file_obj.fileno(), length=0, access=mmap.ACCESS_READ) as mmap_obj:
             return mmap_obj.read().decode("UTF-8").split("\n")[:-1]
 
-input = mmap_io("codons.txt")
+input = mmap_io("codon.txt")
 
 virus,vaccine = input[0],input[1]
 
